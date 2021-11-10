@@ -1,0 +1,70 @@
+﻿@model BookModel;
+
+@*@{
+    ViewData["Title"] = "AddBookDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+<style>
+    .container {
+        margin-top:90px;
+    }
+</style>
+
+<div class="container">
+<div class="row">
+    <div class="col-md-6 col-md-offset-6">
+        @if (ViewBag.isSucess)
+        {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        }
+        <form asp-action="AddBookDetails">
+
+            @*<div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" />
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                @*<span asp-validation-for="Title" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Author" class="control-label"></label>
+                <input asp-for="Author" class="form-control" />
+                @*<span asp-validation-for="Author" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                @*<span asp-validation-for="Description" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <input asp-for="Category" class="form-control" />
+                @*<span asp-validation-for="Category" class="text-danger"></span>*@
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Createdon" class="control-label"></label>
+                <input asp-for="Createdon" class="form-control" />
+                <span asp-validation-for="Createdon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Updatedon" class="control-label"></label>
+                <input asp-for="Updatedon" class="form-control" />
+                <span asp-validation-for="Updatedon" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="AddBook" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+

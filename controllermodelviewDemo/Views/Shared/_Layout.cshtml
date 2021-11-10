@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title|Book Store Application</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+    <link href="~/css/Site.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        footer {
+            background: rgb(0, 91, 143);
+           bottom: 0px;
+       
+        }
+
+        a:link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:active {
+            color: #fff;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <img src="~/images/BookstoreLogo.jpg" height="50" width="60" />
+
+
+
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" asp-controller="Home" asp-action="Index" style="color:black;">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="AboutUs" style="color:black;">Aboutus</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="ContactUs" style="color:black;">ContacUS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Book" asp-action="GetallBooks" style="color:black;">AllBooks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Book" asp-action="AddBookDetails" style="color:black;">AddNewBook</a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:black;"><span class="fas fa-user" style="color:black;"></span> Sign Up</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:black;"><span class="fas fa-sign-in-alt" style="color:black;"></span> Login</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+        <main>
+            @RenderBody()
+        </main>
+
+        <footer>
+            @*<div class="container" style="padding: 80px 0;" align="center">
+                <a href="#">
+                    <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-pinterest fa-lg white-text"></i>
+                </a>
+            </div>*@
+            <div style="background: #004872;">
+                <p style="color: #91BEC2; padding: 15px 0;" align="center">
+                    &copy; 2019 Copyright: <a href="mailto:webcodian@gmail.com">Created By: WEB CODIAN</a>
+                </p>
+            </div>
+        </footer>
+
+
+
+    </div>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>
