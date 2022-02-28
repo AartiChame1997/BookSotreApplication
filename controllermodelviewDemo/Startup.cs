@@ -63,7 +63,7 @@ namespace controllermodelviewDemo
                // endpoints.MapDefaultControllerRoute();
                 endpoints.MapControllerRoute(
                     name: "Default",
-                    pattern: "bookapp/{controller=Home}/{action=Index}/{id?}"
+                    pattern: "BookApplication/{controller=Home}/{action=Index}/{id?}"
 
                     );
 

@@ -35,26 +35,7 @@ namespace controllermodelviewDemo.Controllers
         }
 
     
-        public ActionResult AddBookDetails(bool isSucess=false)
-        {
-            ViewBag.isSucess = isSucess;
-            Title = "AddBook";
-
-            return View();
-        }
-        [HttpPost]
-        public async Task<ActionResult> AddBookDetails(BookModel model)
-        {
-
-
-            Title = "AddBook";
-
-          int id= await _bookrepo.AddNewBook(model);
-            if(id>0)
-            {
-                return RedirectToAction("AddBookDetails",new { isSucess = true });
-            }
-            return View();
-        }
+       
+        
     }
 }
